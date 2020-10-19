@@ -64,6 +64,14 @@
      
     <h4> The details are:</h4>
       {{ var }}
+  
+    <ol> 
+    <!-- For loop logic of jinja template -->
+    {%for i in range(0, len)%} 
+        <li>{{var[i]}}</li> 
+    {%endfor%} 
+
+    </ol> 
      
     <br>
     <br>
