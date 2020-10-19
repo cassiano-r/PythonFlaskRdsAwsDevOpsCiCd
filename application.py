@@ -10,8 +10,8 @@ def index():
     
     details = db.get_details()
     print(details)
-    for detail in details:
-        var = detail
+    #for detail in details:
+    #    var = detail
     return render_template('index.html',var=var)
 
 @application.route('/insert',methods = ['post'])
