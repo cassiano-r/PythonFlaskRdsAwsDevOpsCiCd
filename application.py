@@ -12,7 +12,7 @@ def index():
     print(details)
     #for detail in details:
     #    var = detail
-    return render_template('index.html',var=details)
+    return render_template('index.html',var=details, len = len(details))
 
 @application.route('/insert',methods = ['post'])
 def insert():
@@ -25,9 +25,9 @@ def insert():
         db.insert_details(name,email,comment,gender)
         details = db.get_details()
         print(details)
-        for detail in details:
-            var = detail
-        return render_template('index.html',var=var)
+        #for detail in details:
+        #    var = detail
+        return render_template('index.html',var=details, len = len(details))
 
 
 
